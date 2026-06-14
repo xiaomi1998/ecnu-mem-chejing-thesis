@@ -142,8 +142,11 @@
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}  % 清除以前对页眉页脚的设置
-\fancyhead[CO,CE]{华东师范大学硕士专业学位论文}
+\fancyhead[CE]{华东师范大学硕士专业学位论文}  % 偶数页（左页）：论文类型
+\fancyhead[CO]{\leftmark}                   % 奇数页（右页）：章标题
 \fancyfoot[RO,LE]{{\thepage}}
+\renewcommand{\chaptermark}[1]{\markboth{第\chinese{chapter}章\quad #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\quad #1}}
 %\newcommand{\makeheadrule}{%% 定义页眉与正文间双隔线
 %  \makebox[0pt][l]{\rule[.7\baselineskip]{\headwidth}{0.3pt}}%0.4
 %  \rule[0.85\baselineskip]{\headwidth}{1.0pt}\vskip-.8\baselineskip}
