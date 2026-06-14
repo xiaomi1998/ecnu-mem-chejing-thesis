@@ -1,0 +1,20 @@
+# LaTeX 编译产物
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.xdv
+*.pdf
+
+# macOS
+.DS_Store
+
+# Overleaf
+output.*

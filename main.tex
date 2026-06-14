@@ -1,0 +1,133 @@
+% !TEX program = xelatex
+% 华东师范大学硕士专业学位论文 (MEM)
+% 面向服务质量的普惠金融公司DMAIC改进研究——以P公司为例
+
+\documentclass[openany]{ecnumasterpro}
+
+\usepackage{fancyvrb}
+  \fvset{formatcom=\color{blue},frame=single,rulecolor=\color{red}}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{enumitem}
+\setlist{itemsep=0.05\baselineskip,itemindent=0em,partopsep=0pt,parsep=0ex,topsep=0.1\baselineskip}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{pdflscape}
+\usepackage{listings}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  showstringspaces=false,
+  numbers=none,
+  columns=flexible,
+  extendedchars=true
+}
+
+\usepackage[xetex,colorlinks,breaklinks]{hyperref}
+\hypersetup{bookmarksnumbered,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
+
+\graphicspath{{./}{figures/}}
+
+%%%%% 自定义命令
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\dis}{\displaystyle}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+
+\begin{document}
+\let\cleardoublepage\clearpage
+
+%%%%% ===== 中文封面信息 =====
+\graduateyear{2026}
+\class{F832}
+\ctitle{\uline{面向服务质量的普惠金融公司}\\[0.25em]
+\uline{DMAIC改进研究}\\[0.25em]
+\uline{——以P公司为例}}
+\def\cctitle{面向服务质量的普惠金融公司DMAIC改进研究——以P公司为例}
+\caffil{上海国际首席技术官学院}
+\cmajor{工程管理硕士}
+\cdirection{工程管理}
+\csupervisor{XXXX \, 教授}
+\cauthor{车晶}
+\studentid{XXXXXXXXX}
+\cdate{2026 年 6 月}
+
+%%%%% ===== 英文封面信息 =====
+\etitle{\uline{Research on DMAIC Improvement for Service Quality in Inclusive Finance Companies: A Case Study of Company P}}
+\eaffil{\shortstack[l]{Shanghai International Chief\\Technology Officer College}}
+\emajor{Master of Engineering Management}
+\edirection{Engineering Management}
+\esupervisor{Prof. XXXX}
+\eauthor{Che Jing}
+\edate{June, 2026}
+
+%%%%% ===== 生成封面 =====
+\newgeometry{top=2.0cm,bottom=2.0cm,left=2.5cm,right=2.5cm}
+{ \renewcommand{\baselinestretch}{1.6} \makecover }
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%% ===== 原创性声明与著作权使用声明 =====
+\include{Declaration}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%% ===== 答辩委员会成员 =====
+\include{Committee}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\frontmatter
+\restoregeometry
+
+%%%%% ===== 中文摘要 =====
+\include{Abstract_chs}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%% ===== 英文摘要 =====
+\include{Abstract_eng}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%% ===== 生成目录 =====
+\setcounter{tocdepth}{1}
+\phantomsection\pdfbookmark[0]{目录}{ccontents}
+\tableofcontents
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+{\let\oldnumberline\numberline
+\renewcommand{\numberline}{图~\oldnumberline}
+\listoffigures}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+{\let\oldnumberline\numberline
+\renewcommand{\numberline}{表~\oldnumberline}
+\listoftables}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%%% ===== 正文部分 =====
+\linespread{1.4}\selectfont\zihao{-4}
+\mainmatter
+\include{body/chapter1}
+\include{body/chapter2}
+\include{body/chapter3}
+\include{body/chapter4}
+\include{body/chapter5}
+\include{body/chapter6}
+\include{body/chapter7}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%% ===== 参考文献 =====
+\backmatter
+\linespread{1.1}\selectfont
+\include{body/refs}
+
+\clearpage
+\linespread{1.4}\selectfont
+
+%%%%% ===== 致谢 =====
+\include{body/ack}
+
+\end{document}
