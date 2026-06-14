@@ -17,6 +17,10 @@
 \usepackage{tabularx}
 \usepackage{makecell}
 \usepackage{pdflscape}
+% Fix fancyhdr headheight warning
+\setlength{\headheight}{12.64723pt}
+% Fix nameref label redefinition warning (fancyhdr conflicts with hyperref)
+\usepackage{nameref}
 \usepackage{listings}
 
 \lstset{
